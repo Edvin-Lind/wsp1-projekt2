@@ -1,7 +1,19 @@
 body {
   font-family: sans-serif;
-  color: #666;
+  color: black;
   background-color: #f1f1f1;
   font-size: x-large;
   margin: 1em;
+}
+
+#Create {
+  width: 350px;
+}
+
+form{
+  text-align: center;
+  margin-top: 100px;
+  border-radius: 10px;
+  border-color: red;
+  background-color: gray;
 }

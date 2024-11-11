@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projekt #2</title>
-    <link rel="stylesheet" type="text/css" href="/style.css?<%=Time.now.to_i%>">
-</head>
-<body>
-  <img src="/img/glhf.png">
-</body>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/style.css?<%=Time.now.to_i%>"
+    />
+  </head>
+  <body>
+    <div id="Create">
+      <h1>RAT</h1>
+      <p>Skapa din TODO!
+        <form action="/todos/new" method="post">
+          <label>Titel <input type="text" name="title"></label><br>
+          <label>Färg <input type="text" name="color"></label><br>
+          <label>Beskrivning <input type="text" name="description"></label><br>
+          <label>Prioritet <input type="text" name="priority"></label><br>
+          <input type="submit" value="Spara">
+        </form>
+      </p>
+    </div>
+  </body>
 </html>
