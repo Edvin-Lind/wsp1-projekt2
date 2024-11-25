@@ -11,6 +11,7 @@
     />
   </head>
   <body>
+
     <div id="Create">
       <h1>RAT</h1>
       <p>Skapa din TODO!
@@ -22,6 +23,13 @@
           <input type="submit" value="Spara">
         </form>
       </p>
+    </div>
+
+    <div>
+      <h1><%= @todo ['title'] %>  </h1>
+      <p>color: <%= @todo ['color'] %>  </p>
+      <p>Desc: <%= @todo ['description'] %>  </p>
+      <p>priority: <%= @todo ['priority'] %>  </p>
     </div>
   </body>
 </html>
