@@ -15,7 +15,7 @@
     <div id="Create">
       <h1>RAT</h1>
       <p>Skapa din TODO!
-        <form action="/todos/new" method="post">
+        <form action="/create" method="post">
           <label>Titel <input type="text" name="title"></label><br>
           <label>Färg <input type="text" name="color"></label><br>
           <label>Beskrivning <input type="text" name="description"></label><br>
@@ -24,12 +24,13 @@
         </form>
       </p>
     </div>
-
+    <% @todos.each do |todo|  %>
     <div>
-      <h1><%= @todo ['title'] %>  </h1>
-      <p>color: <%= @todo ['color'] %>  </p>
-      <p>Desc: <%= @todo ['description'] %>  </p>
-      <p>priority: <%= @todo ['priority'] %>  </p>
+      <h1><%= todo ['title'] %>  </h1>
+      <p>color: <%= todo ['color'] %>  </p>
+      <p>Desc: <%= todo ['description'] %>  </p>
+      <p>priority: <%= todo ['priority'] %>  </p>
     </div>
+    <% end %>
   </body>
 </html>

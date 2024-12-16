@@ -10,37 +10,18 @@ class App < Sinatra::Base
     end
 
     get '/' do
-        redirect("views/index")
-    end
-
-    get '/index' do
         @todos = db.execute('SELECT * FROM todos')
         erb(:"index")
     end
 
-    get '/views/:id' do |id|
-        @todo = db.execute('SELECT * FROM todos WHERE id=?', id).first
-        erb(:"index")
-    end
-
-    post '/views/index' do
+    post '/create' do
         title = params['title']
         color = params['color']
         description = params['description']
         priority = params['priority']
 
         db.execute("INSERT INTO todos (title, color, description, priority) VALUES(?,?,?,?)", [title, color, description, priority])
-        redirect("/index")
-    end
-
-    post '/views/index' do
-        title = params['title']
-        color = params['color']
-        description = params['description']
-        priority = params['priority']
-
-        db.execute("INSERT INTO todos (title, color, description, priority) VALUES(?,?,?,?)", [title, color, description, priority])
-        redirect("/index")
+        redirect("/")
     end
 
 end

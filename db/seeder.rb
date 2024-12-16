@@ -22,9 +22,9 @@ class Seeder
   end
 
   def self.populate_tables
-    db.execute('INSERT INTO todos (title, color, description, priority) VALUES ("Äpple",   white, "En rund frukt som finns i många olika färger.", 3)')
-    db.execute('INSERT INTO todos (title, color, description, priority) VALUES ("Päron",    black, "En nästan rund, men lite avläng, frukt. Oftast mjukt fruktkött.", 2)')
-    db.execute('INSERT INTO todos (title, color, description, priority) VALUES ("Banan",  yellow, "En avlång gul frukt.", 1)')
+    db.execute('INSERT INTO todos (title, color, description, priority) VALUES ("Äpple",   "white", "En rund frukt som finns i många olika färger.", 3)')
+    db.execute('INSERT INTO todos (title, color, description, priority) VALUES ("Päron",    "black", "En nästan rund, men lite avläng, frukt. Oftast mjukt fruktkött.", 2)')
+    db.execute('INSERT INTO todos (title, color, description, priority) VALUES ("Banan",  "yellow", "En avlång gul frukt.", 1)')
   end
 
   private
