@@ -30,6 +30,15 @@
       <p>color: <%= todo ['color'] %>  </p>
       <p>Desc: <%= todo ['description'] %>  </p>
       <p>priority: <%= todo ['priority'] %>  </p>
+
+      <form action="/edit/<%= todo['id'] %>" method="get">
+        <input type="submit" value="Redigera">
+      </form>
+
+      <form action="/delete/<%= todo['id'] %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Ta bort">
+      </form>
     </div>
     <% end %>
   </body>
